@@ -101,6 +101,12 @@
         let secs = String(seconds % 60).padStart(2, '0');
         countdownElement.textContent = `Pendaftaran berakhir dalam: ${hrs}:${mins}:${secs}`;
     }, 1000);
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Biar nggak reload halaman
+    alert("Selamat! Pendaftaran kamu berhasil. Tunggu info selanjutnya ya 😊");
+    this.reset(); // Kosongin form setelah submit
+});
 </script>
 
 </body>
